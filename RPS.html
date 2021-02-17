@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors</title>
+    </head>
+
+    <body>
+
+
+
+        <script>
+
+
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * Math.floor(max));
+            }
+
+
+            function computerPlay(){
+                //This function will randomly return either Rock, paper, or scissors as the computers play
+                var roll = getRandomInt(3);
+                if (roll === 0){
+                    return "rock"
+                }
+                else if (roll === 1){
+                    return "paper"
+                }
+                else{
+                    return "scissors"
+                }
+            }
+
+            function playRound(playerSelection, computerSelection){
+                //This determins who wins
+                playerSelection = playerSelection.toLowerCase();
+                if (playerSelection === computerSelection){
+                    console.log("It's a tie!");
+                    return 0;
+                }
+                if (playerSelection === 'rock'){
+                    if (computerSelection === 'scissors'){
+                        console.log("Player Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
+                        return 1;
+                    }
+                    else{
+                        console.log("Computer Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
+                        return 0;
+                    }
+                }
+
+                if (playerSelection === 'paper'){
+                    if (computerSelection === 'rock'){
+                        console.log("Player Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
+                        return 1;
+                    }
+                    else{
+                        console.log("Computer Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
+                        return 0;
+                    }
+                }
+
+                else{
+                    if (computerSelection === 'rock'){
+                        console.log("Computer Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
+                        return 0;
+                    }
+                    else{
+                        console.log("Player Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
+                        return 1;
+                    }
+            }}
+
+
+            function game(){
+                let playerWins = 0;
+                for (let i = 0; i < 5; i ++){
+ 
+
+                    let answer = prompt("Please enter either rock, paper, or scissors: ");
+                    playerWins += playRound(answer, computerPlay());
+                }
+                console.log("The player won a total of " + playerWins + "/5 games!");
+            }
+
+            game();
+
+
+        </script>
+
+
+
+
+    </body>
+    </html> 
