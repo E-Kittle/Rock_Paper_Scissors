@@ -3,87 +3,178 @@
     <head>
     <meta charset="utf-8">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
+
+        <div id = "page">
+            <div id="header">
+                <h1>Bear, Hunter, Ninja</h1>
+            </div>
+            <!-- <div id = "mainBody"> -->
+                <div id = "rules">
+                    <h2>Rules</h2>
+                    <p>This is a game of rock, paper, scissors with flair. </p>
+                    <ul>
+                        <li>Bear beats Ninja</li>
+                        <li>Hunter beats Bear</li>
+                        <li>Ninja beats Hunter</li>
+                    </ul>
+                    <p>Best of five games wins!</p>
+                </div>
+                <div id="scoreboard">
+                    <h2>Scoreboard</h2>
+                    <div class="game" id ="1">
+                        <p>Game 1:</p>
+                    </div>
+                    <div class="game" id ="2">
+                        <p>Game 2:</p>
+                    </div>
+                    <div class="game" id ="3">
+                        <p>Game 3:</p>
+                    </div>
+                    <div class="game" id ="4">
+                        <p>Game 4:</p>
+                    </div>
+                    <div class="game" id ="5">
+                        <p>Game 5:</p>
+                    </div>
+                </div>
+            <!-- </div> -->
+                <div id = "fighters">
+                    <h2>CHOOSE YOUR FIGHTER!</h2>
+                    <input type="image" src="Images/bear.jpg" name="bearButton" id="bearButton">
+                    <!-- <img id="bear" src = "Images/bear.jpg" alt="Bear"> -->
+                    <!-- <img id="hunter" src = "Images/hunter.jpg" alt="Hunter"> -->
+                    <input type="image" src="Images/hunter.jpg" name="hunterButton" id="hunterButton">
+                    <!-- <img id="ninja" src = "Images/ninja2.jpg" alt="Ninja"> -->
+                    <input type="image" src="Images/ninja2.jpg" name="ninjaButton" id="ninjaButton">
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
         <script>
 
 
-            function getRandomInt(max) {
-                return Math.floor(Math.random() * Math.floor(max));
-            }
+            // function getRandomInt(max) {
+            //     return Math.floor(Math.random() * Math.floor(max));
+            // }
 
 
-            function computerPlay(){
-                //This function will randomly return either Rock, paper, or scissors as the computers play
-                var roll = getRandomInt(3);
-                if (roll === 0){
-                    return "rock"
-                }
-                else if (roll === 1){
-                    return "paper"
-                }
-                else{
-                    return "scissors"
-                }
-            }
+            // function computerPlay(){
+            //     //This function will randomly return either Rock, paper, or scissors as the computers play
+            //     var roll = getRandomInt(3);
+            //     if (roll === 0){
+            //         return "rock"
+            //     }
+            //     else if (roll === 1){
+            //         return "paper"
+            //     }
+            //     else{
+            //         return "scissors"
+            //     }
+            // }
 
-            function playRound(playerSelection, computerSelection){
-                //This determins who wins
-                playerSelection = playerSelection.toLowerCase();
-                if (playerSelection === computerSelection){
-                    console.log("It's a tie!");
-                    return 0;
-                }
-                if (playerSelection === 'rock'){
-                    if (computerSelection === 'scissors'){
-                        console.log("Player Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
-                        return 1;
-                    }
-                    else{
-                        console.log("Computer Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
-                        return 0;
-                    }
-                }
+            // function playRound(playerSelection, computerSelection){
+            //     //This determins who wins
+            //     playerSelection = playerSelection.toLowerCase();
+            //     if (playerSelection === computerSelection){
+            //         console.log("It's a tie!");
+            //         return 0;
+            //     }
+            //     if (playerSelection === 'rock'){
+            //         if (computerSelection === 'scissors'){
+            //             console.log("Player Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
+            //             return 1;
+            //         }
+            //         else{
+            //             console.log("Computer Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
+            //             return 0;
+            //         }
+            //     }
 
-                if (playerSelection === 'paper'){
-                    if (computerSelection === 'rock'){
-                        console.log("Player Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
-                        return 1;
-                    }
-                    else{
-                        console.log("Computer Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
-                        return 0;
-                    }
-                }
+            //     if (playerSelection === 'paper'){
+            //         if (computerSelection === 'rock'){
+            //             console.log("Player Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
+            //             return 1;
+            //         }
+            //         else{
+            //             console.log("Computer Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
+            //             return 0;
+            //         }
+            //     }
 
-                else{
-                    if (computerSelection === 'rock'){
-                        console.log("Computer Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
-                        return 0;
-                    }
-                    else{
-                        console.log("Player Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
-                        return 1;
-                    }
-            }}
+            //     else{
+            //         if (computerSelection === 'rock'){
+            //             console.log("Computer Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
+            //             return 0;
+            //         }
+            //         else{
+            //             console.log("Player Wins! User selected: "+ playerSelection + " and computer selected: " + computerSelection);
+            //             return 1;
+            //         }
+            // }}
 
 
-            function game(){
-                let playerWins = 0;
-                for (let i = 0; i < 5; i ++){
+            // function game(){
+            //     let playerWins = 0;
+            //     for (let i = 0; i < 5; i ++){
  
 
-                    let answer = prompt("Please enter either rock, paper, or scissors: ");
-                    playerWins += playRound(answer, computerPlay());
-                }
-                console.log("The player won a total of " + playerWins + "/5 games!");
-            }
+            //         let answer = prompt("Please enter either rock, paper, or scissors: ");
+            //         playerWins += playRound(answer, computerPlay());
+            //     }
+            //     console.log("The player won a total of " + playerWins + "/5 games!");
+            // }
 
-            game();
+            // game();
 
 
         </script>
