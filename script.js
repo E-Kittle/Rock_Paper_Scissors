@@ -1,3 +1,10 @@
+//Need to add - 
+//  Initial animation to introduce the game. 
+//  Better graphics/Images
+//  Animation to announce winner
+//  Responsive web design - Title, Rules, Scoreboard, and smaller images
+//  Animation on the scoreboard for each round
+
 //The button click event needs to send the user selection to the function. This function ne
 //function for computer choice
 //function to see who won (playRound)
@@ -54,10 +61,10 @@ function Game(playerChoice){
 //Check who the winner is and display it to the player. Summarize the winds there as well. Then, whipe the scoreboard
 function gameOver(){
     if(computerWins > playerWins){
-        console.log("Computer won! You won " + playerWins + " rounds while the computer won " + computerWins + " rounds" );
+        alert("Computer won! You won " + playerWins + " rounds while the computer won " + computerWins + " rounds" );
     }
     else{
-        console.log("You won! You won " + playerWins + " rounds while the computer won " + computerWins + " rounds" );
+        alert("You won! You won " + playerWins + " rounds while the computer won " + computerWins + " rounds" );
     }
 
     playerWins = 0;

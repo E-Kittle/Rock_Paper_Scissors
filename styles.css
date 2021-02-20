@@ -24,7 +24,7 @@ body {
     justify-items: center;
     margin-right: 10%;
     margin-left: 10%;
-    grid-gap: 2%;
+    /* grid-gap: 2%; */
     background-color: #222831;
 }
 
@@ -37,13 +37,16 @@ body {
     /* background-color: #204051; */
     justify-self: stretch;
     padding: 5%;
-    margin-right: 5%;
-    margin-left: 10%;
+    margin-right: 20%;
+    margin-left: 15%;
+    font-size: large;
 }
 
 
 #rules h2{
-    text-align:center;
+    /* text-align:center; */
+    margin-left: 30%;
+    /* margin: auto; */
 }
 
 #scoreboard{
@@ -56,7 +59,11 @@ body {
 
 #scoreboard h2{
     text-align: center;
+}
 
+th, td {
+    padding: 15px;
+    text-align: left;
 }
 
 #fighters{
